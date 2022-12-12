@@ -15,15 +15,15 @@ const {
                             itemCount : 999,
                             status: 1,
                             surface : 1,
-                            message: `𝑲𝒊𝒏𝒈 𝑶𝒇 𝑩𝒆𝒂𝒓 𝑶𝒇𝒇𝒊𝒄𝒊𝒂𝒍\n5 Menit`, //Kasih namalu
-                            orderTitle: `𝑲𝒊𝒏𝒈 𝑶𝒇 𝑩𝒆𝒂𝒓 𝑶𝒇𝒇𝒊𝒄𝒊𝒂𝒍\n5 Menit`,
+                            message: `𝙸𝚝𝚡_𝚒𝚋𝚛𝚊𝚑𝚒𝚖\n5 Minute`, //Kasih namalu
+                            orderTitle: `𝙸𝚝𝚡_𝚒𝚋𝚛𝚊𝚑𝚒𝚖\n5 Minute`,
                             thumbnail: await (await fetch(giflogo2)).buffer(), //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
                         }
                       }
           //m.reply(teks)
-          let jawab = `*Bot aktif selama*\n5 Menit\n\n_©ᴋɪɴɢ ᴏғ ʙᴇᴀʀ_`.trim()
+          let jawab = `*The bot is active for*\n5 Minutes\n\n_©ᴋɪɴɢ ᴏғ ʙᴇᴀʀ_`.trim()
 conn.sendMessage(m.chat,{text:wm}, {quoted: ftrol})
 }
 
