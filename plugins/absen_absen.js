@@ -1,11 +1,11 @@
 let handler = async (m, { usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
-    if (!(id in conn.absen)) throw `_*Mohon maaf, Tidak ada absen hari ini !*_\n\n*${usedPrefix}ᴍᴜʟᴀɪᴀʙꜱᴇɴ* - ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴀʙꜱᴇɴ`
+    if (!(id in conn.absen)) throw `_*Sorry, No absences today !*_\n\n*${usedPrefix}start absent* -to start to roll call`
 
     let absen = conn.absen[id][1]
     const wasVote = absen.includes(m.sender)
-    if (wasVote) throw '*Kamu sudah absen bang！🙄*'
+    if (wasVote) throw '*You have absent tiresg！🙄*'
     absen.push(m.sender)
     m.reply(`Done!`)
     let d = new Date
