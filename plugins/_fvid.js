@@ -12,10 +12,10 @@ const anu = {
                 },
 	 message: { 
                  "videoMessage": { 
-                 "title":"Haii Kak",
+                 "title":"Hey Sis",
                  "h": `Hmm`,
-                 'seconds': '182', 
-                 'caption': 'Nothing ^^',
+                 'seconds': '182',
+                 'caption': 'Nothing^^',
                  'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                         }
                        }
