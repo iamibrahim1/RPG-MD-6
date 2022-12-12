@@ -15,7 +15,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
       if (global.opts) {
         if (isAdmin || !isBotAdmin){		  
         }else{
-          m.reply('*Terdeteksi Telah mengirim Sticker\nKamu akan di keluarkan!*') // ganti text terserah kamu 
+          m.reply('*Detected Sending Sticker\nYou will be kicked out!*') // ganti text terserah kamu 
           this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
         }return true
       }
