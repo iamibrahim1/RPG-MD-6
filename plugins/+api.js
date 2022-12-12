@@ -89,7 +89,7 @@ module.exports = elaina = async (elaina, mek) => {
 		const wit = moment(Date.now()).tz('Asia/Jayapura').locale('id').format('HH:mm:ss z')
 		const type = Object.keys(mek.message)[0]        
 		const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
-		const prefix = /^[ø=|~!#$%^&.?/\\^z+*@,;]/.test(cmd) ? cmd.match(/^[ø=|~!#$%^&.?/\\^z+*,;]/gi) : '-'          	
+		const prefix = /^[Ã¸=|~!#$%^&.?/\\^z+*@,;]/.test(cmd) ? cmd.match(/^[Ã¸=|~!#$%^&.?/\\^z+*,;]/gi) : '-'          	
         body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : (type == "buttonsResponseMessage") && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
 		budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 		var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
@@ -1782,29 +1782,29 @@ case 'tebaklirik':
 anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/lirik?apikey=${lolkey}`, {method: 'get'})
 get = `*${anu.result.question}*`
 setTimeout( () => {
-elaina.sendMessage(from, 'Jawaban: '
-+anu.result.answer, text, {quoted: mek}) 
+elaina.sendMessage(from, 'Answer: '
++anu.result.answer, text, {quoted: mek})
 }, 60000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_10 Detik lagi..._', text) 
+elaina.sendMessage(from, '_10 more seconds..._', text)
 }, 50000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_20 Detik lagi..._', text) 
+elaina.sendMessage(from, '_20 seconds to go..._', text)
 }, 40000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_30 Detik lagi..._', text) 
+elaina.sendMessage(from, '_30 Seconds..._', text)
 }, 30000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_60 Detik lagi..._', text) 
+elaina.sendMessage(from, '_60 seconds to go..._', text)
 }, 2500) // 1000 = 1s,
 setTimeout( () => {
 elaina.sendMessage(from, get, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'suit':
-if (!q) return reply(`Kirim perintah ${prefix}suit [pilihan]\nContoh: ${prefix}suit gunting`)
-if (!q.match(/batu|gunting|kertas/)) return reply(`Format salah!`)
-if (q.match(/batu|gunting|kertas/)) {
+if (!q) return reply(`Send command ${prefix}suit [optional]\nExample: ${prefix}scissor suit`)
+if (!q.match(/stone|scissors|paper/)) return reply(`Wrong format!`)
+if (q.match(/stone|scissors|paper/)) {
 await sleep(2000)
 var computer = Math.random();
 if (computer < 0.34) {
@@ -1815,24 +1815,24 @@ computer = 'gunting';
 computer = 'kertas';
 }
 if (q == computer) {
-reply(`*Subscribe Yt RflBotz Ofc*\n\nPertandingan Seri!`)
+reply(`*Subscribe Yt  None*\n\nPertandingan Seri!`)
 } else if (q == 'batu') {
 if (computer == 'gunting') {
-reply(`*Subscribe Yt RflBotz Ofc*\n\n You: Batu\n Computer: Gunting\n\nCongrats You win!`)
+reply(`*Subscribe Yt  None*\n\n You: Batu\n Computer: Gunting\n\nCongrats You win!`)
 } else {
-reply(`*Subscribe Yt RflBotz Ofc*\n\n You: Batu\n Computer: Kertas\n\nYou lose:(`)
+reply(`*Subscribe Yt  None*\n\n You: Batu\n Computer: Kertas\n\nYou lose:(`)
 }
 } else if (q == 'gunting') {
 if (computer == 'batu') {
-reply(`*Subscribe Yt RflBotz Ofc*\n\n You: Gunting\n Computer: Batu\n\nYou lose:(`)
+reply(`*Subscribe Yt  None*\n\n You: Gunting\n Computer: Batu\n\nYou lose:(`)
 } else {
-reply(`*Subscribe Yt RflBotz Ofc*\n\n You: Gunting\n Computer: Kertas\n\nCongrats You win!`)
+reply(`*Subscribe Yt   None*\n\n You: Gunting\n Computer: Kertas\n\nCongrats You win!`)
 }
 } else if (q == 'kertas') {
 if (computer == 'batu') {
-reply(`*Subscribe Yt RflBotz Ofc*\n\n You: Kertas\n Computer: Batu\n\nCongrats You win!`)
+reply(`*Subscribe Yt None*\n\n You: Kertas\n Computer: Batu\n\nCongrats You win!`)
 } else {
-reply(`*Subscribe Yt RflBotz Ofc*\n\n You: Kertas\n Computer: Gunting\n\nYou lose:(`)
+reply(`*Subscribe Yt None*\n\n You: Kertas\n Computer: Gunting\n\nYou lose:(`)
 }
 }
 }
@@ -1841,20 +1841,20 @@ case 'tebakkalimat':
 anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/kata?apikey=${lolkey}`, {method: 'get'})
 get = `*${anu.result.pertanyaan}*`
 setTimeout( () => {
-elaina.sendMessage(from, 'Jawaban: '
-+anu.result.jawaban, text, {quoted: mek})
+elaina.sendMessage(from, 'Answer: '
++anu.result.answer, text, {quoted: mek})
 }, 60000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_10 Detik lagi..._', text)
+elaina.sendMessage(from, '_10 more seconds..._', text)
 }, 50000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_20 Detik lagi..._', text)
+elaina.sendMessage(from, '_20 seconds to go..._', text)
 }, 30000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_30 Detik lagi..._', text)
+elaina.sendMessage(from, '_30 Seconds..._', text)
 }, 20000) // 1000 = 1s,
 setTimeout( () => {
-elaina.sendMessage(from, '_60 Detik lagi..._', text)
+elaina.sendMessage(from, '_60 seconds to go..._', text)
 }, 2500) // 1000 = 1s,
 setTimeout( () => {
 elaina.sendMessage(from, get, text, {quoted: mek})
@@ -2068,7 +2068,7 @@ reply(lang.wait())
 		
 		break
 case 'ytmp3': {
-			if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3* _Url YouTube_`)
+			if (args.length === 0) return reply(`Send orders *${prefix}ytmp3* _Url YouTube_`)
 			if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link tidak valid!')
 			var mulaikah = args.join(' ')
 			await reply(lang.wait())
@@ -2085,7 +2085,7 @@ case 'ytmp3': {
                 }
              break
 case 'ytmp4': {
-			if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3* _Url YouTube_`)
+			if (args.length === 0) return reply(`Send orders *${prefix}ytmp3* _Url YouTube_`)
 			if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link tidak valid!')
 			var mulaikah = args.join(' ')
 			zee.Youtube(mulaikah).then(async (data) => {
