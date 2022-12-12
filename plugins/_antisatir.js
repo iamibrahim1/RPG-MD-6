@@ -10,18 +10,18 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     const isAntiSatir = isSatir.exec(m.text)
 
     if (chat.antiSatir && isAntiSatir) {
-        await conn.sendButton(m.chat, `*Kata Satir Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antisatir', '/disable antisatir'], m)
+        await conn.sendButton(m.chat, `*Kata Satir Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot not atmin_'}`, author, ['off antisatir', '/disable antisatir'], m)
         if (isBotAdmin && bot.restrict) {
             // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
     global.db.data.users[m.sender].warn += 1
     
-    await conn.sendButton(m.chat, bottime, `Kamu mendapatkan Warn 1
-Karena menggunakan Kata yg berbau Satir
+    await conn.sendButton(m.chat, bottime, `You get a Warning 1
+Because it uses satirical words
     
     Ketik *.my* untuk cek Warning mu`, `${imgr + 'Anti Satir'}`, [
         ['MY', `${usedPrefix}my`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I can't kick!')
     }
     return !0
 }
