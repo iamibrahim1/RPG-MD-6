@@ -20,10 +20,10 @@ export async function before(m) {
 	let mf = Object.values(this.menfess).find(v => v.status === false && v.penerima == m.sender)
 	if (!mf) return !0
 	console.log(m)
-	if (m.text === 'Balas Pesan' && m.quoted.mtype == 'buttonsMessage') return m.reply("Silahkan kirim pesan balasan kamu.");
-	let txt = `Hai kak @${mf.dari.split('@')[0]}, kamu menerima balasan nih.\n\nPesan balasannya:\n${m.text}\n`.trim();
+	if (m.text === 'Balas Pesan' && m.quoted.mtype == 'buttonsMessage') return m.reply("Splease send your reply message.");
+        let txt = `Hey sis @${mf.dari.split('@')[0]}, You received this reply.\n\nReply message:\n${m.text}\n`.trim();
 	await this.reply(mf.dari, txt, null).then(() => {
-		m.reply('Berhasil mengirim balasan.')
+		m.reply('Successfully sent reply.')
 		this.delay(1000)
 		delete this.menfess[mf.id]
 		return !0
