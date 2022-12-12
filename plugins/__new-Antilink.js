@@ -23,103 +23,102 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     const isAntiLinkHttp = isLinkHttp.exec(m.text)
     const isAntiLinkBitly = isLinkBitly.exec(m.text)
 
-    if (chat.antiLinkTik && isAntiLinkTik) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinktik', '/disable antilinktik'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkTik && isAntiLinkTik) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antilinktic', '/disable antilinktic'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Tiktok
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link Tiktok'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    For Sending Tiktok Links
+    Type *.limit* to check limit`, `${imgr + 'Anti Link Tiktok'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
     
-    if (chat.antiLinkBitly && isAntiLinkBitly) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkbitly', '/disable antilinkbitly'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkBitly && isAntiLinkBitly) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antilinkbitly', '/disable antilinkbitly'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Bitly
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link Bitly'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    For Sending Bitly Links
+    Type *.limit* to check limit`, `${imgr + 'Anti Link Bitly'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
 
-    if (chat.antiLinkYt && isAntiLinkYt) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkyt', '/disable antilinkyt'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkYt && isAntiLinkYt) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antilinkyt', '/disable antilinkyt'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Youtube
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link Youtube'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    Because Sending Youtube Link
+    Type *.limit* to check limit`, `${imgr + 'Anti Link Youtube'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
     
-    if (chat.antiLinkTel && isAntiLinkTel) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinktel', '/disable antilinktel'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkTel && isAntiLinkTel) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antilinktel', '/disable antilinktel'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     global.db.data.users[m.sender].joinlimit -= 1
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Telegram
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link Tele'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    For Sending Telegram Links
+    Type *.limit* to check limit`, `${imgr + 'Anti Link Tele'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
     
-    if (chat.antiLinkFb && isAntiLinkFb) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkfb', '/disable antilinkfb'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkFb && isAntiLinkFb) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antilinkfb', '/disable antilinkfb'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Facebook
-    Ketik *.limit* untuk cek limit`, wm, `${imgr + 'Anti Link Facebook'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    Because Send Facebook Link
+    Type *.limit* to check limit`, wm, `${imgr + 'Anti Link Facebook'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
     
-    if (chat.antiLinkIg && isAntiLinkIg) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkig', '/disable antilinkig'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkIg && isAntiLinkIg) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antilinkig', '/disable antilinkig'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Instagram
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link Facebook'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    For Sending Instagram Links
+    Type *.limit* to check limit`, `${imgr + 'Anti Link Facebook'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
-    
     if (chat.antiLinkWa && isAntiLinkWa) {
         await conn.sendButton(m.chat, bottime, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkwa', '/disable antilinkwa'], m)
         if (isBotAdmin && bot.restrict) {
@@ -128,28 +127,28 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link WhatsApp
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link WhatsApp'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    Because Send WhatsApp Link
+    Type *.limit* to check limit`, `${imgr + 'Anti Link WhatsApp'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
     
-    if (chat.antiLinkHttp && isAntiLinkHttp) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antihatetepe', '/disable antihatetepe'], m)
-        if (isBotAdmin && bot.restrict) {
-            // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+    if (chat. antiLinkHttp && isAntiLinkHttp) {
+        await conn.sendButton(m.chat, `*Link Detected!*${isBotAdmin ? '' : '\n\n_Bot is not atmin_'}`, author, ['off antihatetepe', '/disable antihatetepe'], m)
+        if (isBotAdmin && bot. restrict) {
+            // await conn. groupParticipantsUpdate(m. chat, [m. sender], 'remove')
     global.db.data.users[m.sender].limit = 0
     global.db.data.users[m.sender].warn += 1
     global.db.data.users[m.sender].banned = true
     
-    await conn.sendButton(m.chat, bottime, `*Limit anda di reset ke 0*\n*WARN +1*\n*+ Banned Pengirim*
-    Karena Mengirim Link Http
-    Ketik *.limit* untuk cek limit`, `${imgr + 'Anti Link Https'}`, [
-        ['OK', `Ok`]
+    await conn.sendButton(m.chat, bottime, `*Your limit has been reset to 0*\n*WARN +1*\n*+ Banned Sender*
+    Because Send Http Link
+    Type *.limit* to check limit`, `${imgr + 'Anti Link Https'}`, [
+        ['OK', `OK`]
     ], m)
-        } else if (!bot.restrict) return m.reply('Gk bisa gw kick!')
+        } else if (!bot.restrict) return m.reply('I cant kick!')
     }
-    return !0
+    returns !0
 }
